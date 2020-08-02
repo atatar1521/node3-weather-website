@@ -8,6 +8,8 @@ const forecast = require('./utills/forecast')
 
 const app = express()
 
+const port = process.env.PORT || 3000
+
 //Define pathes for Express config
 const publicDirectoryPath = path.join(__dirname,'../public')
 const viewsPath = path.join(__dirname, '../templates/views')
@@ -95,6 +97,6 @@ app.get('*', (req,res)=>{
      errorMassage : 'Page not found' 
   })
 })
-app.listen(3000,()=>{
-console.log(`app listening at http://localhost:3000`)
+app.listen(port,()=>{
+console.log('app listening at ' + port)
 })
