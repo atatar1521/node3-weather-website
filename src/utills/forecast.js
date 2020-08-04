@@ -16,7 +16,7 @@ const forecast = (latitude,longitude,callback)=>{
         }
        else{
          callback(undefined,body.current.weather_descriptions[0] +','+'its currently ' + body.current.temperature + ' degrees outside' +
-         ' and its feels like ' + body.current.feelslike + 'And the local time is: '+  body.location.localtime) 
+         ' and its feels like ' + body.current.feelslike + ' ,And the local time is: '+  body.location.localtime) 
         }
       })
     }
